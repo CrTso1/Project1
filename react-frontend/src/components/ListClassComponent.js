@@ -89,6 +89,7 @@ class ListClassComponent extends Component {
                                 <th>Thứ</th>
                                 <th>Thời gian</th>
                                 <th>Phòng</th>
+                                <th>Lịch thi</th>
                                 <th>Lựa chọn</th>
                             </tr>
                         </thead>
@@ -105,6 +106,7 @@ class ListClassComponent extends Component {
                                         <td> {clazz.thu} </td>
                                         <td> {clazz.thoiGian} </td>
                                         <td> {clazz.phong} </td>
+                                        <td> {clazz.lichThi} </td>
                                         <td>
                                             <button onClick = {() => this.editClass(clazz.maLop)} className="btn btn-info">Sửa</button>
                                             <button style ={{marginLeft: "10px"}} onClick = {() => this.deleteClass(clazz.maLop)} className="btn btn-danger">Xóa</button>

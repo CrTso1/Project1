@@ -12,7 +12,8 @@ class UpdateClassComponent extends Component {
             ky : '',
             thu : '',
             thoiGian : '',
-            phong: ''
+            phong: '',
+            lichThi: ''
 
         }
     }
@@ -68,6 +69,12 @@ class UpdateClassComponent extends Component {
         })
     }
 
+    changeExamDateHandler = (event) => {
+        this.setState({
+            lichThi : event.target.value
+        })
+    }
+
     updateClass = (event) => {
         event.preventDefault();
 
@@ -77,7 +84,8 @@ class UpdateClassComponent extends Component {
             ky : this.state.ky,
             thu : this.state.thu,
             thoiGian : this.state.thoiGian,
-            phong : this.state.phong
+            phong : this.state.phong,
+            lichThi : this.state.lichThi
         }
         console.log('clazz =>' + JSON.stringify(newClass));
 
@@ -166,6 +174,11 @@ class UpdateClassComponent extends Component {
                                         <label>Phòng:</label>
                                         <input placeholder="Phòng" name = "phong" className = "form-control"
                                             value = {this.state.phong} onChange = {this.changeRoomHandler}></input>
+                                    </div>
+                                    <div className = "form-group">
+                                        <label>Lịch thi:</label>
+                                        <input placeholder="Lịch thi" name = "lichThi" className = "form-control"
+                                            value = {this.state.lichThi} onChange = {this.changeExamDateHandler}></input>
                                     </div>
 
                                     <button className = "btn btn-success" onClick = {this.updateClass}>Lưu</button>

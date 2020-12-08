@@ -33,6 +33,9 @@ public class LearningClass {
 	@Column(name = "phong")
 	private String phong;
 	
+	@Column(name = "lichThi")
+	private String lichThi;
+	
 	public LearningClass() {
 		
 	}
@@ -101,6 +104,14 @@ public class LearningClass {
 
 	public void setPhong(String phong) {
 		this.phong = phong;
+	}
+
+	public String getLichThi() {
+		return lichThi;
+	}
+
+	public void setLichThi(String lichThi) {
+		this.lichThi = lichThi;
 	}
 	
 	

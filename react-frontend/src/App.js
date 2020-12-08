@@ -21,7 +21,7 @@ function App() {
               <Route path = '/update-class/:id' component = {UpdateClassComponent}></Route>
             </Switch>
           </div>
-          <FooterComponent></FooterComponent>
+          {/* <FooterComponent></FooterComponent> */}
       </Router>
     </div>
   );

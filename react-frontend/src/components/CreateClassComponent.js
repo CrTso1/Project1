@@ -18,7 +18,8 @@ class CreateClassComponent extends Component {
             ky : '',
             thu : '',
             thoiGian : '',
-            phong: ''
+            phong: '',
+            lichThi: ''
 
         }
     }
@@ -74,6 +75,12 @@ class CreateClassComponent extends Component {
         })
     }
 
+    changeExamDateHandler = (event) => {
+        this.setState({
+            lichThi : event.target.value
+        })
+    }
+
     saveClass = (event) => {
         event.preventDefault();
 
@@ -83,7 +90,8 @@ class CreateClassComponent extends Component {
             ky : this.state.ky,
             thu : this.state.thu,
             thoiGian : this.state.thoiGian,
-            phong : this.state.phong
+            phong : this.state.phong,
+            lichThi : this.state.lichThi
         }
         console.log('clazz =>' + JSON.stringify(clazz));
 
@@ -101,7 +109,7 @@ class CreateClassComponent extends Component {
 
     render() {
         return (
-            <div>
+            <div style = {{marginTop : "100px"}}>
                 <div className ="container">
                     <div className = "row">
                         <div className = "card col-md-6 offset-md-3 offset-md-3">
@@ -152,6 +160,11 @@ class CreateClassComponent extends Component {
                                         <label>Phòng:</label>
                                         <input placeholder="Phòng" name = "phong" className = "form-control"
                                             value = {this.state.phong} onChange = {this.changeRoomHandler}></input>
+                                    </div>
+                                    <div className = "form-group">
+                                        <label>Lịch thi:</label>
+                                        <input placeholder="Lịch thi" name = "lichThi" className = "form-control"
+                                            value = {this.state.lichThi} onChange = {this.changeExamDateHandler}></input>
                                     </div>
 
                                     <button className = "btn btn-success" onClick = {this.saveClass}>Lưu</button>
