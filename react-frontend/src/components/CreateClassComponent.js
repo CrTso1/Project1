@@ -14,7 +14,7 @@ class CreateClassComponent extends Component {
 
         this.state = {
             ten : '',
-            khoa : '',
+            tuan : '',
             ky : '',
             thu : '',
             thoiGian : '',
@@ -31,9 +31,9 @@ class CreateClassComponent extends Component {
         })
     }
     
-    changeDepartmentHandler = (event) => {
+    changeWeekHandler = (event) => {
         this.setState({
-            khoa : event.target.value
+            tuan : event.target.value
         })
     }
 
@@ -86,7 +86,7 @@ class CreateClassComponent extends Component {
 
         let clazz = {
             ten : this.state.ten,
-            khoa : this.state.khoa,
+            tuan : this.state.tuan,
             ky : this.state.ky,
             thu : this.state.thu,
             thoiGian : this.state.thoiGian,
@@ -122,9 +122,9 @@ class CreateClassComponent extends Component {
                                             value = {this.state.ten} onChange = {this.changeNameHandler}></input>
                                     </div>
                                     <div className = "form-group">
-                                        <label>Khoa:</label>
-                                        <input placeholder="Khoa" name = "khoa" className = "form-control"
-                                            value = {this.state.khoa} onChange = {this.changeDepartmentHandler}></input>
+                                        <label>Tuần:</label>
+                                        <input placeholder="Tuần" name = "tuan" className = "form-control"
+                                            value = {this.state.tuan} onChange = {this.changeWeekHandler}></input>
                                     </div>
                                     <div className = "form-group">
                                         <label>Kỳ:</label>

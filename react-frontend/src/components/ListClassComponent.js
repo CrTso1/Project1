@@ -84,7 +84,7 @@ class ListClassComponent extends Component {
                             <tr>
                                 <th>Mã lớp</th>
                                 <th>Tên lớp</th>
-                                <th>Khoa</th>
+                                <th>Tuần</th>
                                 <th>Kỳ</th>
                                 <th>Thứ</th>
                                 <th>Thời gian</th>
@@ -101,7 +101,7 @@ class ListClassComponent extends Component {
                                     <tr key={clazz.maLop}>
                                         <td> {clazz.maLop} </td>
                                         <td> {clazz.ten} </td>
-                                        <td> {clazz.khoa} </td>
+                                        <td> {clazz.tuan} </td>
                                         <td> {clazz.ky} </td>
                                         <td> {clazz.thu} </td>
                                         <td> {clazz.thoiGian} </td>
