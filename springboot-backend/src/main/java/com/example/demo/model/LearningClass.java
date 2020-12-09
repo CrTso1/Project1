@@ -39,6 +39,9 @@ public class LearningClass {
 	@Column(name = "tuan")
 	private String tuan;
 	
+	@Column(name = "newNote", columnDefinition = "varchar(2000)")
+	private String newNote;
+	
 	public LearningClass() {
 		
 	}
@@ -124,5 +127,15 @@ public class LearningClass {
 	public void setTuan(String tuan) {
 		this.tuan = tuan;
 	}
+
+	public String getNewNote() {
+		return newNote;
+	}
+
+	public void setNewNote(String newNote) {
+		this.newNote = newNote;
+	}
+	
+	
 
 }

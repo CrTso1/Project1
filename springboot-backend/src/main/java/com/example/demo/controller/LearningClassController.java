@@ -75,6 +75,7 @@ public class LearningClassController {
 		clazz.setThu(newClass.getThu());
 		clazz.setLichThi(newClass.getLichThi());
 		clazz.setTuan(newClass.getTuan());
+		clazz.setNewNote(newClass.getNewNote());
 		
 		LearningClass updatedClass = classRepository.save(clazz);
 		

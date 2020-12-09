@@ -31,6 +31,10 @@ class ListClassComponent extends Component {
         })
     }
 
+    takeNoteClass = (id) => {
+        this.props.history.push(`/take-note/${id}`)
+    }
+
     changeSearchHandler = (event) => {
         this.setState({
             search : event.target.value
@@ -110,6 +114,7 @@ class ListClassComponent extends Component {
                                         <td>
                                             <button onClick = {() => this.editClass(clazz.maLop)} className="btn btn-info">Sửa</button>
                                             <button style ={{marginLeft: "10px"}} onClick = {() => this.deleteClass(clazz.maLop)} className="btn btn-danger">Xóa</button>
+                                            <button style ={{marginLeft: "10px"}} onClick = {() => this.takeNoteClass(clazz.maLop)} className="btn btn-info">Ghi chú</button>
                                         </td>
                                     </tr>
                                 )
